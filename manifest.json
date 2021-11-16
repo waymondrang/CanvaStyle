@@ -1,0 +1,26 @@
+{
+    "name": "dm4c",
+    "version": "0.0.1",
+    "description": "dark mode for canvas © raymond wang",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [
+                "*://canvas.ucsd.edu/*",
+                "*://canvas.eee.uci.edu/*"
+            ],
+            "js": [
+                "index.js"
+            ]
+        }
+    ],
+    "browser_action": {
+
+    },
+    "web_accessible_resources": [
+        "dm4c.css"
+    ],
+    "permissions": [
+        "storage"
+    ]
+}
