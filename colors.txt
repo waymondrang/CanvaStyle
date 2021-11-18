@@ -4,12 +4,12 @@
 25% 404040
 30% 4d4d4d
 35% 595959
-40% 666666 (tertiary text)
+40% 666666
 45% 737373
 50% 808080
 ----
-60% 999999
+60% 999999 (tertiary text)
 70% b3b3b3
 80% cccccc (secondary text)
-90% e6e6e6
+90% e6e6e6 (main)
 95% f2f2f2
