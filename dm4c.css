@@ -22,6 +22,8 @@ TODO:
   --dm4c-90: #e6e6e6;
   --dm4c-95: #f2f2f2;
   --dm4c-accent: #8e99f3;
+  /* overrides */
+  --qBMHb-placeholderColor: var(--dm4c-40);
 }
 
 @font-face {
@@ -103,14 +105,6 @@ button.eHiXd_dnnz[type="submit"],
   color: #ffffff5a;
 }
 
-/* button hover color */
-.btn:hover,
-.Button:hover,
-.ui-button:hover,
-.fQfxa_bGBk:hover .fQfxa_dqAF.fQfxa_buuG {
-  background: var(--dm4c-15);
-}
-
 /**
 
         dashboard
@@ -120,6 +114,21 @@ button.eHiXd_dnnz[type="submit"],
 /* non-sticky dashboard header */
 .ic-Dashboard-header, body.dashboard-is-planner .ic-Dashboard-header {
   position: relative;
+}
+
+/* show more activity */
+.fake-link {
+  color: var(--dm4c-accent);
+}
+
+/* date for show more activities */
+.responsive_awareness .stream-details .date {
+  color: var(--dm4c-80);
+}
+
+/* show more activity unread dot */
+.recent_activity>li .unread {
+  background-color: var(--dm4c-accent);
 }
 
 /**
@@ -202,6 +211,50 @@ button.eHiXd_dnnz[type="submit"],
   padding: 0 8px 0 16px;
 }
 
+/* todo card on class homepage */
+.eHiXd_brAJ, a.eHiXd_brAJ, button.eHiXd_brAJ, button.eHiXd_brAJ[type="button"], button.eHiXd_brAJ[type="reset"], button.eHiXd_brAJ[type="submit"] {
+  color: var(--dm4c-40);
+}
+
+/**
+
+        class page calendar
+
+*/
+
+.mini-cal-header {
+  border: none;
+  background-color: #262626;
+  border-radius: 8px 8px 0 0;
+  color: #e6e6e6;
+}
+
+.mini_calendar {
+  border: none;
+  background-color: #262626;
+  border-radius: 0 0 8px 8px;
+}
+
+.mini_calendar .day.has_event {
+  background-color: #404040;
+}
+
+.mini_calendar .day {
+  color: #cccccc;
+  height: 36px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.mini_calendar .day.other_month {
+  color: #666666;
+}
+
+/* today background color */
+.mini_calendar .day.today {
+  background-color: #8e99f3;
+}
+
 /** 
 
         links
@@ -211,6 +264,260 @@ button.eHiXd_dnnz[type="submit"],
 a {
   text-decoration: none !important;
   color: var(--dm4c-accent);
+}
+
+/**
+
+        input/select
+        note: these declarations overlap for some reason
+
+*/
+
+textarea, input[type=text], input[type=password], input[type=datetime], input[type=datetime-local], input[type=date], input[type=month], input[type=time], input[type=week], input[type=number], input[type=email], input[type=url], input[type=search], input[type=tel], input[type=color], .uneditable-input {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  color: #e6e6e6;
+  background: var(--dm4c-25);
+  font-size: 14px;
+}
+
+select, textarea, input[type=text], input[type=password], input[type=datetime], input[type=datetime-local], input[type=date], input[type=month], input[type=time], input[type=week], input[type=number], input[type=email], input[type=url], input[type=search], input[type=tel], input[type=color], .uneditable-input {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  color: #e6e6e6 !important;
+  background: var(--dm4c-25);
+  font-size: 14px;
+}
+
+/**
+
+        breadcrumbs
+
+*/
+
+.ic-app-crumbs,
+#breadcrumbs a {
+  color: var(--dm4c-40);
+}
+
+/** 
+
+        course menu toggle button
+
+*/
+
+button#courseMenuToggle.Button {
+  background: transparent;
+}
+
+button#courseMenuToggle.Button:hover {
+  background: var(--dm4c-15);
+}
+
+/**
+
+        course homepage
+
+*/
+
+/* sticky left menu */
+.ic-sticky-frame {
+  top: 12px;
+}
+
+/* main class title */
+.pages.show .course-title {
+  color: var(--dm4c-90);
+}
+
+/**
+
+        buttons
+
+*/
+
+/* invisible button hover accent color */
+.eHiXd_brAJ:active, .eHiXd_brAJ:focus, .eHiXd_brAJ:hover, a.eHiXd_brAJ:active, a.eHiXd_brAJ:focus, a.eHiXd_brAJ:hover, button.eHiXd_brAJ:active, button.eHiXd_brAJ:focus, button.eHiXd_brAJ:hover, button.eHiXd_brAJ[type="button"]:active, button.eHiXd_brAJ[type="button"]:focus, button.eHiXd_brAJ[type="button"]:hover, button.eHiXd_brAJ[type="reset"]:active, button.eHiXd_brAJ[type="reset"]:focus, button.eHiXd_brAJ[type="reset"]:hover, button.eHiXd_brAJ[type="submit"]:active, button.eHiXd_brAJ[type="submit"]:focus, button.eHiXd_brAJ[type="submit"]:hover {
+  color: var(--dm4c-accent);
+}
+
+.btn, .Button, .ui-button {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  color: #e6e6e6;
+  background: #333333;
+  font-size: 14px;
+}
+
+/* small buttons */
+.btn-small, .Button--small
+ {
+  padding: 4px 8px;
+ }
+
+ /* button hover color */
+.btn:hover,
+.Button:hover,
+.ui-button:hover,
+.fQfxa_bGBk:hover .fQfxa_dqAF.fQfxa_buuG {
+  background: var(--dm4c-25);
+}
+
+/** 
+
+        discussion topics page
+
+*/
+
+.toolbarView {
+  background: transparent;
+}
+
+.toolbarView .headerBar {
+  background-color: var(--dm4c-15);
+  border-radius: 8px;
+  border: none;
+}
+
+.ic-Layout-contentMain {
+  padding: 0;
+  margin: 24px;
+}
+
+.topic .entry-content {
+  background-color: transparent;
+  border: none;
+}
+
+.discussion_entry>.discussion-entry-reply-area {
+  background-color: transparent;
+  border: none;
+}
+
+/* text editor for replys */
+.tox-tinymce {
+
+}
+
+/* reply area */
+.discussion_entry>.discussion-entry-reply-area {
+  padding: 0;
+}
+
+/* link element with button function and form */
+.discussion-reply-box {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  color: var(--dm4c-80);
+  background: var(--dm4c-15);
+  font-size: 14px;
+  padding: 12px;
+}
+
+/* link element hover */
+.discussion-reply-box:hover, .discussion-reply-box:focus {
+  background: var(--dm4c-25);
+  color: var(--dm4c-80);
+}
+
+/** 
+
+      announcements page
+
+*/
+
+.qBMHb_cSXm {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  color: #e6e6e6;
+  background: var(--dm4c-25);
+  font-size: 14px;
+}
+
+/* unread dot */
+.cRLeC_bXiG {
+  background-color: var(--dm4c-accent);
+}
+
+/* reply text under announcements */
+.enRcg_bGBk.enRcg_fpfC, input.enRcg_bGBk[type].enRcg_fpfC {
+  color: var(--dm4c-accent);
+}
+
+/* default profile icon text color */
+.dsJBj_ddES .dsJBj_eYKj {
+  color: var(--dm4c-accent);
+}
+
+/* sections */
+span.enRcg_bGBk.enRcg_doqw.enRcg_eQnG {
+  color: var(--dm4c-40);
+}
+
+/* announcement preview */
+.ic-item-row__content-col p, .ic-item-row__content-col h4, .ic-item-row__content-col .ic-announcement-row__content {
+  color: var(--dm4c-40);
+}
+
+/* announcement item */
+.ic-item-row {
+  padding: 18px;
+  background-color: var(--dm4c-15);
+  border: 1px solid var(--dm4c-25);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* announcement unread count pill */
+.ic-unread-badge {
+  margin: 0;
+  background-color: var(--dm4c-accent);
+}
+
+/* announcement unread count pill right side */
+.ic-unread-badge__total-count {
+  background-color: var(--dm4c-25);
+}
+
+/* container for announcement unread count pill */
+.ic-item-row__meta-col .ic-item-row__meta-actions {
+  height: initial;
+  margin-bottom: 6px;
+}
+
+[data-testid="single-announcement-test-id"] {
+  margin-top: 6px;
+}
+
+/**
+
+        grades
+
+*/
+
+/* course details table */
+.course_details {
+  margin: 0;
+  margin-top: 18px;
+  border-collapse: initial !important;
+  border-radius: 8px;
+  background-color: var(--dm4c-15);
+  padding: 18px
+}
+
+/* table elements */
+.course_details td {
+  border-bottom: 1px solid var(--dm4c-25);
+}
+
+/* course title */
+.course_details .course {
+  padding: 12px;
 }
 
 /**
@@ -254,33 +561,6 @@ button.eHiXd_eYmo[type="submit"]:hover,
   background: #757575;
 }
 
-.eHiXd_brAJ,
-a.eHiXd_brAJ,
-button.eHiXd_brAJ,
-button.eHiXd_brAJ[type="button"],
-button.eHiXd_brAJ[type="reset"],
-button.eHiXd_brAJ[type="submit"],
-.eHiXd_dnnz:focus,
-.eHiXd_dnnz:hover,
-a.eHiXd_dnnz:focus,
-a.eHiXd_dnnz:hover,
-button.eHiXd_dnnz:focus,
-button.eHiXd_dnnz:hover,
-button.eHiXd_dnnz[type="button"]:focus,
-button.eHiXd_dnnz[type="button"]:hover,
-button.eHiXd_dnnz[type="reset"]:focus,
-button.eHiXd_dnnz[type="reset"]:hover,
-button.eHiXd_dnnz[type="submit"]:focus,
-button.eHiXd_dnnz[type="submit"]:hover,
-.MlJlv_btWg,
-a.fbyHH_bGBk,
-button.fbyHH_bGBk,
-.menu-item__badge,
-.ic-DashboardCard__action-badge,
-.PlannerHeader-styles__root, .pages.show .course-title {
-  color: var(--dm4c-95);
-}
-
 .Day-styles__root,
 body,
 #grades_summary td a,
@@ -311,8 +591,6 @@ body,
 .sJGfW_bGBk,
 .blnAQ_dnfM,
 .jpyTq_ycrn,
-.user_content a:not(.btn):not(.Button):not(.ui-button):not([role="button"]),
-.mceContentBody a:not(.btn):not(.Button):not(.ui-button):not([role="button"]),
 .ic-DashboardCard__header-term,
 .cvphu_caGd,
 #breadcrumbs>ul>li,
@@ -588,12 +866,6 @@ ol.Grouping-styles__items {
   display: none;
 }
 
-.ic-app-crumbs,
-#breadcrumbs a,
-button#courseMenuToggle.Button {
-  color: #424242;
-}
-
 a:focus,
 a:hover,
 .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .menu-item-icon-container,
@@ -774,14 +1046,6 @@ ul.collectionViewItems.ig-list,
   padding: 2px 4px;
 }
 
-.ig-details__item:after,
-.ig-details,
-.ic-item-row__content-col p,
-.ic-item-row__content-col h4,
-.ic-item-row__content-col .ic-announcement-row__content {
-  color: #999999;
-}
-
 .ic-item-row {
   box-shadow: none;
 }
@@ -832,16 +1096,8 @@ span.fOyUs_bGBk.fOyUs_UeJS {
   color: #999999;
 }
 
-a.fOyUs_bGBk.eHiXd_bGBk.eHiXd_brAJ.eHiXd_ycrn.eHiXd_bNlk.eHiXd_cuTS {
-  color: #e6e6e6;
-}
-
 .cRLeC_bGBk.cRLeC_KksD {
   margin-right: 12px !important;
-}
-
-.ic-item-row {
-  padding: 4px 0;
 }
 
 .ic-item-row__content-col {
@@ -904,38 +1160,6 @@ p {
 
 body:not(.full-width):not(.outcomes):not(.body--login-confirmation) .ic-Layout-wrapper {
   max-width: 1600px;
-}
-
-.mini-cal-header {
-  border: none;
-  background-color: #262626;
-  border-radius: 8px 8px 0 0;
-  color: #e6e6e6;
-}
-
-.mini_calendar {
-  border: none;
-  background-color: #262626;
-  border-radius: 0 0 8px 8px;
-}
-
-.mini_calendar .day.has_event {
-  background-color: #404040;
-}
-
-.mini_calendar .day {
-  color: #cccccc;
-  height: 36px;
-  font-size: 14px;
-  border-radius: 8px;
-}
-
-.mini_calendar .day.other_month {
-  color: #666666;
-}
-
-.mini_calendar .day.today {
-  background-color: #8e99f3;
 }
 
 #right-side .events_list li.event i.icon-check,

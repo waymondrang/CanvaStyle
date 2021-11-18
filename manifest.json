@@ -1,6 +1,6 @@
 {
     "name": "dm4c",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "dark mode for canvas © raymond wang",
     "manifest_version": 2,
     "content_scripts": [
@@ -14,9 +14,7 @@
             ]
         }
     ],
-    "browser_action": {
-
-    },
+    "browser_action": {},
     "web_accessible_resources": [
         "dm4c.css"
     ],
