@@ -9,6 +9,7 @@
                 "*://canvas.ucsd.edu/*",
                 "*://canvas.eee.uci.edu/*"
             ],
+            "run_at": "document_end",
             "js": [
                 "index.js"
             ]
