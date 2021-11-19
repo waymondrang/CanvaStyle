@@ -75,6 +75,71 @@ button.eHiXd_eYmo[type="submit"]:hover,
 
 */
 
+/* input fields */
+.cCAhm_bGBk {
+  margin-right: 12px;
+}
+
+/* apply button */
+.eHiXd_cuTS,
+a.eHiXd_cuTS,
+button.eHiXd_cuTS,
+button.eHiXd_cuTS[type="button"],
+button.eHiXd_cuTS[type="reset"],
+button.eHiXd_cuTS[type="submit"] {
+  border-radius: 8px;
+}
+
+/* apply button */
+.eHiXd_bXiG,
+a.eHiXd_bXiG,
+button.eHiXd_bXiG,
+button.eHiXd_bXiG[type="button"],
+button.eHiXd_bXiG[type="reset"],
+button.eHiXd_bXiG[type="submit"] {
+  background: var(--dm4c-accent);
+  border: none;
+  color: var(--dm4c-90);
+}
+
+/* apply button hover */
+.eHiXd_bXiG:active,
+.eHiXd_bXiG:hover,
+a.eHiXd_bXiG:active,
+a.eHiXd_bXiG:hover,
+button.eHiXd_bXiG:active,
+button.eHiXd_bXiG:hover,
+button.eHiXd_bXiG[type="button"]:active,
+button.eHiXd_bXiG[type="button"]:hover,
+button.eHiXd_bXiG[type="reset"]:active,
+button.eHiXd_bXiG[type="reset"]:hover,
+button.eHiXd_bXiG[type="submit"]:active,
+button.eHiXd_bXiG[type="submit"]:hover {
+  background: var(--dm4c-accent);
+}
+
+/* apply button */
+.eHiXd_bXiG:active,
+.eHiXd_bXiG:focus,
+.eHiXd_bXiG:hover,
+a.eHiXd_bXiG:active,
+a.eHiXd_bXiG:focus,
+a.eHiXd_bXiG:hover,
+button.eHiXd_bXiG:active,
+button.eHiXd_bXiG:focus,
+button.eHiXd_bXiG:hover,
+button.eHiXd_bXiG[type="button"]:active,
+button.eHiXd_bXiG[type="button"]:focus,
+button.eHiXd_bXiG[type="button"]:hover,
+button.eHiXd_bXiG[type="reset"]:active,
+button.eHiXd_bXiG[type="reset"]:focus,
+button.eHiXd_bXiG[type="reset"]:hover,
+button.eHiXd_bXiG[type="submit"]:active,
+button.eHiXd_bXiG[type="submit"]:focus,
+button.eHiXd_bXiG[type="submit"]:hover {
+  color: var(--dm4c-80);
+}
+
 /* show grades button/link */
 #right-side .button-sidebar-wide {
   margin: 0;
@@ -230,10 +295,30 @@ button.eHiXd_bGBk[type="submit"]::before {
 /**
 
 
+        !syllabus
+
+
+*/
+
+/* syllabus table */
+#syllabus tr.detail_list td.not_last {
+  border-bottom: 1px solid var(--dm4c-25);
+}
+
+/**
+
+
         !side menu/!menu list
 
 
 */
+
+/* focus side bar item */
+.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active
+  .ic-app-header__menu-list-link:focus {
+  box-shadow: inset 0 0 0 1px var(--dm4c-accent),
+    inset 0 0 0 2px var(--dm4c-accent);
+}
 
 /* side menu links text color */
 .ic-app-footer__links a,
@@ -513,6 +598,19 @@ img {
 
 */
 
+/* score details */
+.ic-Table tbody th {
+  border-bottom-color: var(--dm4c-25);
+}
+
+/* checkboxes */
+.ic-Form-control.ic-Form-control--checkbox
+  input[type="checkbox"]:checked
+  ~ .ic-Label:before {
+  background-color: var(--dm4c-accent);
+  border-color: var(--dm4c-accent);
+}
+
 textarea,
 input[type="text"],
 input[type="password"],
@@ -529,7 +627,7 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  border: none;
+  border: 2px solid transparent;
   outline: none;
   border-radius: 6px;
   color: #e6e6e6;
@@ -595,8 +693,8 @@ input[type="search"].ic-Input,
 input[type="tel"].ic-Input,
 input[type="color"].ic-Input,
 .uneditable-input.ic-Input {
-  background: var(--dm4c-25);
-  border: 1px solid var(--dm4c-40);
+  background: var(--dm4c-20);
+  border: 2px solid var(--dm4c-40);
 }
 
 select,
@@ -616,7 +714,7 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  border: 1px solid var(--dm4c-40);
+  border: 2px solid var(--dm4c-40);
   outline: none;
   border-radius: 6px;
   color: #e6e6e6 !important;
@@ -664,6 +762,11 @@ button#courseMenuToggle.Button:hover {
 
         
 */
+
+/* course row hover */
+.course-list-table .course-list-table-row:hover {
+  background-color: var(--dm4c-15);
+}
 
 /* mini calendar event day */
 .mini_calendar .day.has_event {
@@ -824,6 +927,11 @@ span.notification_message {
 /* main class title */
 .pages.show .course-title {
   color: var(--dm4c-90);
+}
+
+/* side bar text */
+.jpyTq_bGBk {
+  color: var(--dm4c-40);
 }
 
 /* side bar faq */
@@ -1297,6 +1405,26 @@ span.enRcg_bGBk.enRcg_doqw.enRcg_eQnG {
 
 */
 
+/* table row hover */
+.ic-Table.ic-Table--hover-row tbody tr:hover {
+  border-color: var(--dm4c-accent);
+}
+
+/* final grades row */
+#grades_summary tr.final_grade {
+  border-top: 2px solid var(--dm4c-25);
+}
+
+/* context for assignment title */
+#grades_summary th.title .context {
+  color: var(--dm4c-40);
+}
+
+/* container for assignment title */
+#grades_summary th.title {
+  border-bottom-color: var(--dm4c-25);
+}
+
 /* course details table */
 .course_details {
   margin: 0;
@@ -1315,6 +1443,25 @@ span.enRcg_bGBk.enRcg_doqw.enRcg_eQnG {
 /* course title */
 .course_details .course {
   padding: 12px;
+}
+
+/*
+
+
+        !modules
+
+
+*/
+
+/* modules colored icon */
+.ig-published:not(.student-view) .ig-type-icon {
+  color: var(--dm4c-accent);
+}
+
+/* modules colored side */
+.ig-list .ig-row.ig-published:not(.student-view):before {
+  background-color: var(--dm4c-accent);
+  border: none;
 }
 
 /*
@@ -1985,19 +2132,4 @@ table.summary caption {
 .ic-Table th,
 .ic-Table td {
   border-bottom-color: #404040;
-}
-
-.eHiXd_bNlk.eHiXd_ycrn,
-.eHiXd_eESV.eHiXd_ycrn,
-a.eHiXd_bNlk.eHiXd_ycrn,
-a.eHiXd_eESV.eHiXd_ycrn,
-button.eHiXd_bNlk.eHiXd_ycrn,
-button.eHiXd_bNlk[type="button"].eHiXd_ycrn,
-button.eHiXd_bNlk[type="reset"].eHiXd_ycrn,
-button.eHiXd_bNlk[type="submit"].eHiXd_ycrn,
-button.eHiXd_eESV.eHiXd_ycrn,
-button.eHiXd_eESV[type="button"].eHiXd_ycrn,
-button.eHiXd_eESV[type="reset"].eHiXd_ycrn,
-button.eHiXd_eESV[type="submit"].eHiXd_ycrn {
-  padding: 0;
 }
