@@ -9,6 +9,7 @@ TODO:
 :root {
   --dm4c-10: #1a1a1a;
   --dm4c-15: #262626;
+  --dm4c-15-50: #26262650;
   --dm4c-20: #333333;
   --dm4c-25: #404040;
   --dm4c-30: #4d4d4d;
@@ -22,6 +23,7 @@ TODO:
   --dm4c-90: #e6e6e6;
   --dm4c-95: #f2f2f2;
   --dm4c-accent: #8e99f3;
+  --dm4c-warn: #d32f2f;
   /* overrides */
   --qBMHb-placeholderColor: var(--dm4c-40);
 }
@@ -70,10 +72,115 @@ button.eHiXd_eYmo[type="submit"]:hover,
 /**
 
 
+        !buttons
+
+
+*/
+
+/* invisible button hover accent color */
+.eHiXd_brAJ:active,
+.eHiXd_brAJ:focus,
+.eHiXd_brAJ:hover,
+a.eHiXd_brAJ:active,
+a.eHiXd_brAJ:focus,
+a.eHiXd_brAJ:hover,
+button.eHiXd_brAJ:active,
+button.eHiXd_brAJ:focus,
+button.eHiXd_brAJ:hover,
+button.eHiXd_brAJ[type="button"]:active,
+button.eHiXd_brAJ[type="button"]:focus,
+button.eHiXd_brAJ[type="button"]:hover,
+button.eHiXd_brAJ[type="reset"]:active,
+button.eHiXd_brAJ[type="reset"]:focus,
+button.eHiXd_brAJ[type="reset"]:hover,
+button.eHiXd_brAJ[type="submit"]:active,
+button.eHiXd_brAJ[type="submit"]:focus,
+button.eHiXd_brAJ[type="submit"]:hover {
+  color: var(--dm4c-accent);
+}
+
+button,
+.btn,
+.Button,
+.ui-button {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  color: var(--dm4c-90);
+  background: var(--dm4c-40);
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 8px 12px;
+}
+
+/* icon buttons */
+.Button--icon-action,
+.Button--icon-action-rev {
+  color: var(--dm4c-80);
+}
+
+.btn:focus,
+.Button:focus,
+.ui-button:focus {
+  color: var(--dm4c-90);
+}
+
+/* small buttons */
+.btn-small,
+.Button--small {
+  padding: 4px 8px;
+}
+
+/* standard button hover */
+.btn:hover.ui-state-hover,
+.Button:hover.ui-state-hover,
+.ui-button:hover.ui-state-hover {
+  background: var(--dm4c-80);
+  color: var(--dm4c-15);
+  border: none;
+}
+
+/* standard button hover */
+.btn:hover,
+.Button:hover,
+.ui-button:hover {
+  background: var(--dm4c-80);
+  color: var(--dm4c-15);
+}
+
+/* primary button hover */
+.btn-primary:hover,
+.Button--primary:hover {
+  background: var(--dm4c-accent);
+}
+
+/* primary button hover */
+.btn-primary:hover.ui-state-hover,
+.Button--primary:hover.ui-state-hover {
+  background: var(--dm4c-accent);
+  color: var(--dm4c-90);
+  border: none;
+}
+
+/**
+
+
         !dashboard
 
 
 */
+
+/* course card badge */
+.ic-DashboardCard__action-badge {
+  background: var(--dm4c-accent);
+}
+
+/* more actions for course card */
+.Button--icon-action,
+.Button--icon-action-rev {
+  padding: 2px 4px;
+  font-size: 1rem;
+}
 
 /* input fields */
 .cCAhm_bGBk {
@@ -313,6 +420,11 @@ button.eHiXd_bGBk[type="submit"]::before {
 
 */
 
+/* menu item badge */
+.menu-item__badge {
+  background: var(--dm4c-accent);
+}
+
 /* focus side bar item */
 .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active
   .ic-app-header__menu-list-link:focus {
@@ -493,10 +605,391 @@ img {
 /**
 
 
-        !quizzes/!quiz
+        !canvas text editor
 
 
 */
+
+/* bottom bar separator */
+._t93g8g {
+  border-right: 1px solid var(--dm4c-25) !important;
+}
+
+/* bottom bar button hover */
+.fQfxa_bGBk:hover .fQfxa_bCUx.fQfxa_eCSh {
+  background: var(--dm4c-40);
+}
+
+/* bottom bar */
+[data-testid="RCEStatusBar"] {
+  justify-content: center;
+  border: 2px solid var(--dm4c-40);
+  border-radius: 8px;
+  padding: 4px 12px;
+  margin: 0 !important;
+  margin-top: 12px !important;
+}
+
+/* editor focus */
+.tox .tox-edit-area.active,
+.tox .tox-edit-area.active iframe {
+  border-color: var(--dm4c-accent);
+}
+
+/* editor bottom bar */
+.canvas-rce__skins--root {
+  background-color: transparent;
+}
+
+/* border style editor css class */
+.tox.tox-tinymce {
+  border-radius: 8px;
+}
+
+/**
+
+
+        !quizzes/!quiz/!questions
+
+
+*/
+
+/* numerical answer */
+#questions .short_answer_question .answers_wrapper,
+#questions .numerical_question .answers_wrapper {
+  border-top: 1px solid var(--dm4c-25);
+}
+
+/* multiple blanks */
+.question.fill_in_multiple_blanks_question .answer_group,
+.question.multiple_dropdowns_question .answer_group {
+  border-top: 1px solid var(--dm4c-25);
+}
+
+/* question header question name */
+#questions.assessment_results .question .header .name {
+  padding: 0;
+  flex: 1;
+}
+
+/* question header points */
+.question .header .question_points_holder {
+  margin: 0;
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+
+/* question header */
+#questions.assessment_results .question .header {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
+/* textarea */
+.question textarea {
+  border: 2px solid var(--dm4c-40);
+}
+
+/* last saved */
+#last_saved_indicator {
+  color: var(--dm4c-60);
+}
+
+/* question content */
+#questions.assessing .question_holder .question {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+/* answered question results */
+#questions.assessment_results .question_holder .question {
+  margin: 24px;
+}
+
+/* right side */
+div#quiz-time-elapsed {
+  border: 1px solid var(--dm4c-25);
+  background-color: var(--dm4c-15);
+  padding: 12px 18px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+/* questions list */
+a.no-warning {
+  color: inherit;
+}
+
+/* quiz score */
+.quiz_score .score_value {
+  color: var(--dm4c-accent);
+}
+
+/* attempt history bottom text */
+#quiz-submission-version-table .submission-pending-review {
+  margin-left: 0;
+  color: var(--dm4c-60);
+}
+
+/* attempt history card */
+#quiz-submission-version-table {
+  border: 1px solid var(--dm4c-25);
+  background-color: var(--dm4c-15);
+  padding: 18px;
+  border-radius: 8px;
+}
+
+/* attempt history */
+.ic-Table th.ic-Table--header-row {
+  border-bottom-color: var(--dm4c-25);
+}
+
+/* quiz instructions */
+div#quiz-instructions {
+  margin-bottom: 24px;
+}
+
+/* bottom bar */
+.form-actions {
+  border: 1px solid var(--dm4c-25);
+  border-radius: 8px;
+  background: var(--dm4c-15);
+  margin: 0;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+/* question links */
+ul#question_list li.list_question {
+  color: var(--dm4c-40);
+}
+
+/* current question */
+ul#question_list li.answered.current_question a {
+  color: var(--dm4c-80);
+}
+
+/* seen question */
+ul#question_list li.seen {
+  color: var(--dm4c-40);
+}
+
+/* current question */
+ul#question_list li.current_question {
+  color: var(--dm4c-90) !important;
+}
+
+/* answered question */
+ul#question_list li.answered a {
+  color: var(--dm4c-accent);
+}
+
+/* upload box */
+.question_holder
+  .display_question
+  .file-upload-question-holder
+  .file-upload-box {
+  border-radius: 8px;
+}
+
+/* question */
+#questions.assessing {
+  background: transparent;
+  min-height: inherit;
+}
+
+/* quiz detail values */
+#quiz_show ul#quiz_student_details li .value {
+  color: var(--dm4c-80);
+}
+
+.btn-published,
+.btn-published:hover {
+  background: var(--dm4c-accent);
+  border: none;
+}
+
+/* related items */
+.page-action-list a {
+  color: var(--dm4c-accent);
+  border-bottom: 1px solid var(--dm4c-25);
+}
+
+/* related items */
+.page-action-list a:hover,
+.page-action-list a:focus {
+  color: var(--dm4c-accent);
+}
+
+/* published button */
+.btn-published.disabled,
+.btn-published.ui-button.ui-state-disabled,
+.btn-published.disabled:hover {
+  background: var(--dm4c-accent);
+  border: none;
+}
+
+/* published color */
+.publish-icon.publish-icon-published {
+  color: var(--dm4c-accent);
+}
+
+/* quiz description */
+#quiz_show .description.teacher-version {
+  border: 1px solid var(--dm4c-25);
+  background-color: var(--dm4c-15);
+  border-radius: 8px;
+}
+
+/* question group */
+#questions .group_top {
+  background-color: var(--dm4c-15);
+  border: 1px solid var(--dm4c-25);
+}
+
+/* form answers comments */
+form.question_form .form_answers .answer_comments {
+  padding: 12px 18px;
+}
+
+/* form answer */
+.form_answers {
+  margin-bottom: 12px;
+}
+
+/* question form comment */
+form.question_form .comment {
+  border-radius: 8px;
+}
+
+/* answer form option */
+form.question_form .form_answers .answer.hover {
+  border: 1px solid var(--dm4c-35);
+  background-color: var(--dm4c-20);
+}
+
+/* answer form option */
+form.question_form .form_answers .answer {
+  border: 1px solid var(--dm4c-25);
+  border-radius: 8px;
+  margin-top: 12px;
+  padding: 18px;
+}
+
+/* quiz answer comment arrow */
+.quiz_comment:before {
+  border-bottom-color: var(--dm4c-25);
+}
+
+/* quiz answer comment arrow */
+.quiz_comment:after {
+  border-bottom-color: var(--dm4c-25);
+}
+
+/* quiz answer comment */
+.quiz_comment {
+  background-image: none;
+  background-color: var(--dm4c-15);
+  border: 1px solid var(--dm4c-25);
+}
+
+/* question border */
+.question.multiple_choice_question .answer,
+.question.multiple_answers_question .answer,
+.question.matching_question .answer,
+.question.true_false_question .answer {
+  border-top: 1px solid var(--dm4c-25);
+}
+
+/* question points */
+.question .header .question_points_holder {
+  color: var(--dm4c-60);
+}
+
+/* question header */
+.question .header {
+  background-color: transparent;
+  border-bottom: 1px solid var(--dm4c-25);
+}
+
+/* question editor */
+.question {
+  background-color: var(--dm4c-15);
+  border-radius: 8px;
+  border: 1px solid var(--dm4c-25);
+}
+
+/* tab focus */
+.ui-tabs .ui-tabs-nav li.ui-state-focus,
+.ui-tabs .ui-tabs-nav li.ui-state-focus.ui-tabs-active {
+  background: var(--dm4c-15);
+  border-color: var(--dm4c-25);
+}
+
+/* tab border radius */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+  border-top-right-radius: 8px;
+}
+
+/* tab border radius */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+  border-top-left-radius: 8px;
+}
+
+/* tab link */
+.ui-tabs .ui-tabs-nav li a {
+  color: var(--dm4c-accent);
+}
+
+/* tab link */
+.ui-tabs .ui-tabs-nav li.ui-state-hover a,
+.ui-tabs .ui-tabs-nav li:hover a {
+  color: var(--dm4c-accent);
+}
+
+/* hover on tab */
+.ui-tabs .ui-tabs-nav li.ui-state-hover,
+.ui-tabs .ui-tabs-nav li:hover {
+  background-color: var(--dm4c-15);
+  border-color: var(--dm4c-25);
+}
+
+/* quiz submission */
+.quiz-submission,
+.question_editing {
+  border: 1px solid var(--dm4c-25);
+  background: var(--dm4c-15);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+/* quiz editor */
+#quiz_edit_wrapper #quiz_tabs #questions_tab {
+  background: transparent;
+}
+
+/* popup auto-save background */
+.fvvQs_bGBk {
+  background: var(--dm4c-15-50);
+}
+
+/* popup auto-save bottom part */
+.dNoYT_bGBk {
+  background: var(--dm4c-15);
+  border-top: 1px solid var(--dm4c-25);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
 
 /* popup auto-save */
 .fOyUs_fZwI,
@@ -506,6 +999,7 @@ img {
 
 /* popup auto-save */
 .fdyuz_bGBk {
+  border: 1px solid var(--dm4c-25);
   background: var(--dm4c-15);
   color: var(--dm4c-90);
   border-radius: 8px;
@@ -514,6 +1008,7 @@ img {
 /* popup auto-save header */
 .cDMBL_bGBk {
   background: transparent;
+  border-bottom-color: var(--dm4c-25);
 }
 
 /* quiz editor container */
@@ -580,7 +1075,7 @@ img {
 
 /* top part of quiz */
 .quiz-header {
-  border-bottom: 1px solid var(--dm4c-25);
+  border-bottom: none;
 }
 
 /* footer button container */
@@ -720,6 +1215,7 @@ input[type="color"],
   color: #e6e6e6 !important;
   background: var(--dm4c-25);
   font-size: 14px;
+  margin-bottom: 0;
 }
 
 /**
@@ -762,6 +1258,11 @@ button#courseMenuToggle.Button:hover {
 
         
 */
+
+/* using modules popup */
+.eesy_container_v4.eesy_light a {
+  color: var(--dm4c-accent);
+}
 
 /* course row hover */
 .course-list-table .course-list-table-row:hover {
@@ -1008,6 +1509,19 @@ input.enRcg_bGBk[type].enRcg_bLsb {
 
 */
 
+/* assignment description */
+#assignment_show .description.teacher-version {
+  border: 1px solid var(--dm4c-25);
+  background-color: var(--dm4c-15);
+  border-radius: 8px;
+}
+
+/* assignment items */
+.item-group-condensed .ig-row {
+  background-color: var(--dm4c-15);
+  color: var(--dm4c-90);
+}
+
 /* assignment detail bar */
 #assignment_show .student-assignment-overview {
   border: none;
@@ -1019,7 +1533,7 @@ input.enRcg_bGBk[type].enRcg_bLsb {
 
 /* quiz detail bar */
 #quiz_show ul#quiz_student_details {
-  border: none;
+  border: 1px solid var(--dm4c-25);
   background-color: var(--dm4c-15);
   border-radius: 8px;
   padding: 12px;
@@ -1047,113 +1561,26 @@ input.enRcg_bGBk[type].enRcg_bLsb {
 /* assignment section headers */
 .item-group-condensed .ig-header {
   border-radius: 8px;
-  background-color: #262626;
+  background-color: var(--dm4c-25);
   color: #e6e6e6;
-  border: 1px solid #404040;
+  border: none;
   margin: 12px 0;
 }
 
-/**
-
-
-        !buttons
-
-
-*/
-
-/* invisible button hover accent color */
-.eHiXd_brAJ:active,
-.eHiXd_brAJ:focus,
-.eHiXd_brAJ:hover,
-a.eHiXd_brAJ:active,
-a.eHiXd_brAJ:focus,
-a.eHiXd_brAJ:hover,
-button.eHiXd_brAJ:active,
-button.eHiXd_brAJ:focus,
-button.eHiXd_brAJ:hover,
-button.eHiXd_brAJ[type="button"]:active,
-button.eHiXd_brAJ[type="button"]:focus,
-button.eHiXd_brAJ[type="button"]:hover,
-button.eHiXd_brAJ[type="reset"]:active,
-button.eHiXd_brAJ[type="reset"]:focus,
-button.eHiXd_brAJ[type="reset"]:hover,
-button.eHiXd_brAJ[type="submit"]:active,
-button.eHiXd_brAJ[type="submit"]:focus,
-button.eHiXd_brAJ[type="submit"]:hover {
-  color: var(--dm4c-accent);
+/* assignment drag handle */
+.ig-list .icon-drag-handle {
+  color: var(--dm4c-60);
 }
 
-button,
-.btn,
-.Button,
-.ui-button {
-  border: none;
-  outline: none;
-  border-radius: 6px;
-  color: var(--dm4c-90);
-  background: var(--dm4c-20);
-  font-size: 14px;
-  box-sizing: border-box;
-  padding: 8px 12px;
+/* first assignment item */
+.item-group-condensed .ig-list li:first-child .ig-row,
+.item-group-condensed .ig-list li:first-of-type .ig-row {
+  border-radius: 8px 8px 0 0;
 }
 
-/* icon buttons */
-.Button--icon-action,
-.Button--icon-action-rev {
-  color: var(--dm4c-80);
-}
-
-.btn:focus,
-.Button:focus,
-.ui-button:focus {
-  color: var(--dm4c-90);
-}
-
-/* disable border on button hover */
-.ui-state-hover,
-.ui-widget-content .ui-state-hover,
-.ui-widget-header .ui-state-hover,
-.ui-state-focus,
-.ui-widget-content .ui-state-focus,
-.ui-widget-header .ui-state-focus {
-  border: none;
-}
-
-/* small buttons */
-.btn-small,
-.Button--small {
-  padding: 4px 8px;
-}
-
-/* standard button hover */
-.btn:hover.ui-state-hover,
-.Button:hover.ui-state-hover,
-.ui-button:hover.ui-state-hover {
-  background: var(--dm4c-80);
-  color: var(--dm4c-15);
-  border: none;
-}
-
-/* standard button hover */
-.btn:hover,
-.Button:hover,
-.ui-button:hover {
-  background: var(--dm4c-80);
-  color: var(--dm4c-15);
-}
-
-/* primary button hover */
-.btn-primary:hover,
-.Button--primary:hover {
-  background: var(--dm4c-accent);
-}
-
-/* primary button hover */
-.btn-primary:hover.ui-state-hover,
-.Button--primary:hover.ui-state-hover {
-  background: var(--dm4c-accent);
-  color: var(--dm4c-90);
-  border: none;
+.item-group-condensed .ig-list li:last-child .ig-row,
+.item-group-condensed .ig-list li:last-of-type .ig-row {
+  border-radius: 0px 0px 8px 8px;
 }
 
 /** 
@@ -1926,10 +2353,6 @@ body.primary-nav-expanded .menu-item__text {
 .context_module_item.context_module_item_hover {
   background: transparent;
 }
-.item-group-condensed .ig-row {
-  background-color: #262626;
-  color: #e6e6e6;
-}
 
 .ig-list .ig-row:hover {
   background-color: #333333;
@@ -1946,7 +2369,7 @@ body.primary-nav-expanded .menu-item__text {
 ul.collectionViewItems.ig-list,
 .ig-list .ig-row.ig-row-empty {
   border-radius: 8px;
-  overflow: hidden;
+  background: transparent;
 }
 
 .ig-list .ig-row a.ig-title,
@@ -2042,11 +2465,6 @@ button.element_toggler:focus {
 .fNHEA_cjSw .fNHEA_cSXm::before {
   border: none;
 }
-
-p {
-  color: #cccccc;
-}
-
 .ToDoSidebarItem {
   margin: 0;
   margin-bottom: 12px;
