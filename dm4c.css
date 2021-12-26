@@ -1489,6 +1489,11 @@ button#courseMenuToggle.Button:hover {
         
 */
 
+/* all courses unpublished course */
+.course-list-unpublished-course-row {
+  background-color: transparent;
+}
+
 /* recent activities */
 div#course_home_content {
   padding: 18px;
