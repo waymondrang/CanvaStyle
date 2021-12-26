@@ -18,6 +18,8 @@
   --dm4c-95: #f2f2f2;
   --dm4c-accent: #8e99f3;
   --dm4c-warn: #d32f2f;
+  --dm4c-border-radius: 12px;
+
   /* overrides */
   --qBMHb-placeholderColor: var(--dm4c-40);
 }
@@ -69,6 +71,20 @@ button.eHiXd_eYmo[type="submit"]:hover,
 
 
 */
+
+/* active buttons */
+.btn.active,
+.btn.Button--active,
+.Button.active,
+.active.ui-button,
+.Button.Button--active,
+.Button--active.ui-button,
+.ui-button.ui-state-active:hover,
+.ui-button.ui-state-active,
+.ui-progressbar .ui-button.ui-widget-header {
+  background: var(--dm4c-50);
+  border: 2px solid var(--dm4c-60);
+}
 
 /* invisible button hover accent color */
 .eHiXd_brAJ:active,
@@ -539,6 +555,225 @@ button.eHiXd_brAJ[type="button"],
 button.eHiXd_brAJ[type="reset"],
 button.eHiXd_brAJ[type="submit"] {
   color: var(--dm4c-80);
+}
+
+/**
+
+
+        !calendar page
+
+
+*/
+
+/* mini date picker selected date */
+.ui-datepicker td span.ui-state-default.ui-state-active,
+.ui-datepicker td .ui-progressbar span.ui-state-default.ui-widget-header,
+.ui-progressbar .ui-datepicker td span.ui-state-default.ui-widget-header,
+.ui-datepicker td a.ui-state-default.ui-state-active,
+.ui-datepicker td .ui-progressbar a.ui-state-default.ui-widget-header,
+.ui-progressbar .ui-datepicker td a.ui-state-default.ui-widget-header {
+  background: var(--dm4c-accent);
+  border: var(--dm4c-accent);
+}
+
+/* mini date picker date hover */
+.ui-datepicker td span.ui-state-default.ui-state-hover,
+.ui-datepicker td a.ui-state-default.ui-state-hover {
+  background-color: var(--dm4c-25);
+  border-color: var(--dm4c-25);
+}
+
+/* mini date picker header */
+.ui-datepicker-header.ui-widget-header {
+  background: var(--dm4c-25);
+  border-color: var(--dm4c-25);
+}
+
+/* mini date picker select */
+select.un-bootrstrapify {
+  border-radius: var(--dm4c-border-radius);
+}
+
+/* mini date picker other dates */
+.ui-datepicker td span,
+.ui-datepicker td a {
+  color: var(--dm4c-60);
+}
+
+/* mini date picker */
+.ui-datepicker.ui-widget-content {
+  border-color: var(--dm4c-25);
+  border-radius: var(--dm4c-border-radius);
+}
+
+/* edit event assignment calendar button */
+.input-append .add-on,
+.input-append .btn,
+.input-append .btn-group {
+  margin-left: 8px;
+}
+
+/* edit event assignment calendar button */
+.input-append .add-on:last-child,
+.input-append .btn:last-child {
+  border-radius: var(--dm4c-border-radius);
+}
+
+/* edit event details */
+.event-details-header,
+.event-details-content,
+.event-details-footer {
+  border-bottom: 1px solid var(--dm4c-25);
+}
+
+/* modal body */
+.ui-tabs .ui-tabs-panel {
+  border-color: transparent;
+}
+
+/* active edit tab */
+#edit_event .ui-tabs .ui-tabs-nav li.ui-tabs-active a,
+#edit_event .ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover a,
+#edit_event .ui-tabs .ui-tabs-nav li.ui-tabs-active:hover a {
+  color: var(--dm4c-90)
+}
+
+/* edit tabs default color */
+#edit_event .ui-tabs .ui-tabs-nav li a {
+  color: var(--dm4c-60);
+}
+
+/* edit event modal group user class override */
+div#edit_event {
+  background-color: transparent !important;
+  padding-top: 18px;
+}
+
+/* create new event button */
+#create_new_event_link {
+  color: var(--dm4c-80)
+}
+
+/* week month agenda button group */
+.btn-group>.btn:last-child,
+.btn-group>.dropdown-toggle {
+  border-top-right-radius: var(--dm4c-border-radius);
+  border-bottom-right-radius: var(--dm4c-border-radius);
+}
+
+/* week month agenda button group */
+.btn-group>.btn:first-child {
+  border-top-left-radius: var(--dm4c-border-radius);
+  border-bottom-left-radius: var(--dm4c-border-radius);
+}
+
+/* left and right calendar navigation buttons, respectfully */
+.ui-buttonset .ui-button.ui-corner-left,
+.ui-buttonset .ui-button.ui-corner-right {
+  border-radius: var(--dm4c-border-radius);
+}
+
+/* other month days */
+#calendar-app .fc-other-month,
+#calendar-drag-and-drop-container .fc-other-month {
+  color: var(--dm4c-60)
+}
+
+/* mini calendar other month days */
+#minical .fc-other-month {
+  color: var(--dm4c-60)
+}
+
+/* days of the week */
+.calendar .fc-head thead .fc-widget-header,
+#calendar-drag-and-drop-container .fc-head thead .fc-widget-header {
+  color: var(--dm4c-60)
+}
+
+/* calendar body */
+#calendar-app .fc-month-view .fc-body,
+#calendar-drag-and-drop-container .fc-month-view .fc-body {
+  background-color: var(--dm4c-15);
+}
+
+/* calendar skeleton */
+.calendar .fc-row .fc-content-skeleton td,
+.calendar .fc-row .fc-helper-skeleton td,
+#calendar-drag-and-drop-container .fc-row .fc-content-skeleton td,
+#calendar-drag-and-drop-container .fc-row .fc-helper-skeleton td {
+  border-color: var(--dm4c-25);
+}
+
+/* unthemed thead */
+.fc-unthemed th,
+.fc-unthemed td,
+.fc-unthemed thead,
+.fc-unthemed tbody,
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-row,
+.fc-unthemed .fc-popover {
+  border-color: var(--dm4c-25);
+}
+
+/* today */
+#calendar-app .fc-month-view .fc-today,
+#calendar-drag-and-drop-container .fc-month-view .fc-today {
+  background: var(--dm4c-25)
+}
+
+/* mini calendar */
+#minical {
+  background-color: var(--dm4c-15);
+  border: 1px solid var(--dm4c-25)
+}
+
+/* mini calendar td */
+.fc-row .fc-content-skeleton td,
+.fc-row .fc-helper-skeleton td {
+  border-color: var(--dm4c-25);
+}
+
+/* mini calendar widget content */
+#minical .fc-widget-content {
+  border: 1px solid var(--dm4c-25);
+  color: var(--dm4c-90)
+}
+
+/* mini calendar body container */
+#minical .fc-view-container {
+  padding: 0px;
+}
+
+/* mini calendar today */
+#minical .fc-bg .fc-state-highlight {
+  background: var(--dm4c-25)
+}
+
+/* mini calendar header toolbar */
+#minical .fc-toolbar {
+  border-bottom: 1px solid var(--dm4c-25);
+}
+
+/* calendars legend */
+#context-list-holder,
+#undated-events {
+  background-color: transparent;
+}
+
+/* calendar legend element */
+#context-list .context_list_context {
+  border-radius: var(--dm4c-border-radius);
+}
+
+/* calendar legend element hover */
+#context-list .context_list_context:hover {
+  background: var(--dm4c-15);
+}
+
+/* undated calendar events */
+#undated-events .event {
+  background-color: var(--dm4c-15);
+  padding: 8px;
 }
 
 /**
