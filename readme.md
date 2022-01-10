@@ -22,6 +22,7 @@ Tested on and developed for canvas.instructure.com for maximum compatibility.
 | Course People               | Great         |                                                         |
 | Course Quizzes              | Great         |                                                         |
 | Course Syllabus             | Great         | Coverage dependent on content, compatible in most cases |
+| Courses                     | Great         |                                                         |
 | Dashboard (Card View)       | Great         |                                                         |
 | Dashboard (List View)       | Bad           | Worked early versions, code purged during cleanup       |
 | Dashboard (Recent Activity) | Great         |                                                         |

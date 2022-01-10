@@ -1,5 +1,3 @@
-/* TODO: divide css declarations into specific elements, add comments for each element */
-
 :root {
   --dm4c-10: #1a1a1a;
   --dm4c-15: #262626;
@@ -22,15 +20,6 @@
 
   /* overrides */
   --qBMHb-placeholderColor: var(--dm4c-40);
-}
-
-@font-face {
-  font-family: "gsansmono";
-  src: url("https://fonts.gstatic.com/s/googlesansmono/v4/P5sZzYWFYtnZ_Cg-t0Uq_rfivrdYNYhsAg.woff2") format("woff2");
-}
-
-* {
-  font-family: "gsansmono", monospace !important;
 }
 
 body {
@@ -64,13 +53,7 @@ button.eHiXd_eYmo[type="submit"]:hover,
   color: #262626;
 }
 
-/**
-
-
-        !buttons
-
-
-*/
+/** !buttons */
 
 /* active buttons */
 .btn.active,
@@ -171,13 +154,12 @@ button,
   border: 2px solid var(--dm4c-60);
 }
 
-/**
+/** !dashboard */
 
-
-        !dashboard
-
-
-*/
+/* card view main background */
+.Day-styles__root {
+  background: transparent;
+}
 
 /* left container */
 .ic-Layout-contentMain {
@@ -414,26 +396,14 @@ button.eHiXd_bGBk[type="submit"]::before {
   color: var(--dm4c-80);
 }
 
-/**
-
-
-        !syllabus
-
-
-*/
+/** !syllabus */
 
 /* syllabus table */
 #syllabus tr.detail_list td.not_last {
   border-bottom: 1px solid var(--dm4c-25);
 }
 
-/**
-
-
-        !side menu/!menu list
-
-
-*/
+/** !side menu/!menu list */
 
 /* menu item badge */
 .menu-item__badge {
@@ -485,13 +455,7 @@ body.primary-nav-expanded .ic-app-header__menu-list-item.ic-app-header__menu-lis
   fill: var(--dm4c-90);
 }
 
-/**
-
-
-        !recent activity card
-           
-        
-*/
+/** !recent activity card */
 
 .recent-activity-header {
   border: none;
@@ -522,13 +486,7 @@ body.primary-nav-expanded .ic-app-header__menu-list-item.ic-app-header__menu-lis
   background: var(--dm4c-accent);
 }
 
-/**
-
-
-        !todo list card
-
-
-*/
+/** !todo list card */
 
 .Sidebar__TodoListContainer {
   background-color: var(--dm4c-15);
@@ -537,7 +495,7 @@ body.primary-nav-expanded .ic-app-header__menu-list-item.ic-app-header__menu-lis
   border: 1px solid var(--dm4c-25);
 }
 
-/* todo list/three dot menu checkmark icon color */
+/* todo list/three dot menu check-mark icon color */
 .esvoZ_drOs {
   color: var(--dm4c-80);
 }
@@ -557,13 +515,7 @@ button.eHiXd_brAJ[type="submit"] {
   color: var(--dm4c-80);
 }
 
-/**
-
-
-        !calendar page
-
-
-*/
+/** !calendar page */
 
 /* mini date picker selected date */
 .ui-datepicker td span.ui-state-default.ui-state-active,
@@ -776,13 +728,7 @@ div#edit_event {
   padding: 8px;
 }
 
-/**
-
-
-        !class page calendar
-
-
-*/
+/** !class page calendar */
 
 .mini_month {
   padding: 0;
@@ -808,13 +754,7 @@ div#edit_event {
   background-color: #8e99f3;
 }
 
-/** 
-
-
-        !links
-
-
-*/
+/** !links */
 
 a {
   text-decoration: none !important;
@@ -826,25 +766,13 @@ a:hover {
   color: var(--dm4c-90) !important;
 }
 
-/**
-
-
-        !images
-
-
-*/
+/** !images */
 
 img {
   border-radius: 8px;
 }
 
-/**
-
-
-        !canvas text editor
-
-
-*/
+/** !canvas text editor */
 
 /* bottom bar separator */
 ._t93g8g {
@@ -882,13 +810,7 @@ img {
   border-radius: 8px;
 }
 
-/**
-
-
-        !quizzes/!quiz/!questions
-
-
-*/
+/** !quizzes/!quiz/!questions */
 
 /* numerical answer */
 #questions .short_answer_question .answers_wrapper,
@@ -1313,14 +1235,8 @@ form.question_form .form_answers .answer {
   border-top: none;
 }
 
-/**
-
-
-        !input/!inputs/!select
-        note: these declarations overlap for some reason
-
-
-*/
+/** !input/!inputs/!select */
+/* ? note these declarations overlap for some reason */
 
 /* score details */
 .ic-Table tbody th {
@@ -1445,13 +1361,7 @@ input[type="color"],
   margin-bottom: 0;
 }
 
-/**
-
-
-        !breadcrumbs
-
-
-*/
+/** !breadcrumbs */
 
 .ic-app-crumbs,
 #breadcrumbs a {
@@ -1462,13 +1372,7 @@ input[type="color"],
   background-color: transparent;
 }
 
-/** 
-
-
-        !course menu toggle button
-
-
-*/
+/** !course menu toggle button */
 
 button#courseMenuToggle.Button {
   background: transparent;
@@ -1481,13 +1385,15 @@ button#courseMenuToggle.Button:hover {
   background: var(--dm4c-15);
 }
 
-/**
+/** !course homepage/!course */
 
-
-        !course homepage/!courses
-
-        
-*/
+/* disable background-color change on hover for course events */
+#syllabus tr.date.related td,
+#syllabus tr.date.related th,
+#syllabus tr.date.selected td,
+#syllabus tr.date.selected th {
+  background-color: transparent;
+}
 
 /* all courses unpublished course */
 .course-list-unpublished-course-row {
@@ -1744,13 +1650,7 @@ input.enRcg_bGBk[type].enRcg_bLsb {
   color: var(--dm4c-40) !important;
 }
 
-/**
-
-
-        !assignments
-
-
-*/
+/** !assignments */
 
 /* assignment description */
 #assignment_show .description.teacher-version {
@@ -1838,13 +1738,7 @@ input.enRcg_bGBk[type].enRcg_bLsb {
   color: var(--dm4c-60);
 }
 
-/**
-
-
-        !discussions
-
-
-*/
+/** !discussions */
 
 /* discussion reply */
 .discussion_entry {
@@ -1862,13 +1756,7 @@ input.enRcg_bGBk[type].enRcg_bLsb {
   background: var(--dm4c-accent);
 }
 
-/** 
-
-
-        !discussion topics page
-
-
-*/
+/** !discussion topics page */
 
 /* author avatar */
 .avatar {
@@ -1934,26 +1822,14 @@ input.enRcg_bGBk[type].enRcg_bLsb {
   font-size: 14px;
 }
 
-/**
-
-
-        !external tools
-
-
-*/
+/** !external tools */
 
 /* iframes */
 iframe#tool_content {
   border-radius: 8px;
 }
 
-/**
-
-
-          !users
-
-
-*/
+/** !users */
 
 /* odd user rows */
 .ic-Table.ic-Table--striped tbody tr:nth-child(odd) {
@@ -1988,13 +1864,7 @@ iframe#tool_content {
   color: var(--dm4c-90);
 }
 
-/** 
-
-
-        !announcements page
-
-
-*/
+/** !announcements page */
 
 /* default avatar */
 .dsJBj_bGBk {
@@ -2099,11 +1969,7 @@ span.enRcg_bGBk.enRcg_doqw.enRcg_eQnG {
   border: none;
 }
 
-/**
-
-        !grades
-
-*/
+/** !grades */
 
 /* student final grades */
 #student-grades-final {
@@ -2157,13 +2023,7 @@ span.enRcg_bGBk.enRcg_doqw.enRcg_eQnG {
   padding: 12px;
 }
 
-/*
-
-
-        !modules
-
-
-*/
+/** !modules */
 
 /* modules colored icon */
 .ig-published:not(.student-view) .ig-type-icon {
@@ -2176,13 +2036,7 @@ span.enRcg_bGBk.enRcg_doqw.enRcg_eQnG {
   border: none;
 }
 
-/*
-
-
-        !modal/!popup
-
-
-*/
+/** !modal/!popup */
 
 /* containers */
 .eesy_container.eesy_container_v4.eesy_light,
@@ -2252,13 +2106,7 @@ span.enRcg_bGBk.enRcg_doqw.enRcg_eQnG {
   border-right-color: var(--dm4c-25);
 }
 
-/**
-
-
-        !widget
-
-
-*/
+/** !widget */
 
 /* widget overlay */
 .ui-widget-overlay {
@@ -2299,13 +2147,8 @@ span.enRcg_bGBk.enRcg_doqw.enRcg_eQnG {
   border-top: 1px solid var(--dm4c-25);
 }
 
-/**
+/* ! END COMMENTED SECTION */
 
-
-END COMMENTED SECTION 
-
-
-*/
 .eHQDY_ddES .eHQDY_eWAY {
   stroke: #757575;
 }
