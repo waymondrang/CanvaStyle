@@ -9,26 +9,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
     <title>options</title>
-    <link href="options.css" rel="stylesheet">
+    <link href="options.css" id="darkmode_css" rel="stylesheet">
 </head>
 
 <body>
     <div id="main">
-        <p class="title">ADD NEW MODULE <span id="usage"></span></p>
-        <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
-        <input id="module" placeholder="MODULE NAME" type="text">
-        <div class="action_bar">
-            <button id="save">
-                SAVE
-            </button>
-            <!--<button id="reset">
+        <div class="flex-column">
+            <div id="header_container">
+                <p class="title flex">ADD NEW MODULE <span id="usage"></span></p>
+                <button id="toggle_theme">PAGE THEME</button>
+            </div>
+            <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+            <input id="module" placeholder="MODULE NAME" type="text">
+            <div class="action_bar">
+                <button id="save">
+                    SAVE
+                </button>
+                <!--<button id="reset">
                 RESET ALL
             </button>-->
-            <p id="status"></p>
+                <p id="status"></p>
+            </div>
         </div>
-        <div id="modules">
+        <div id="modules" class="flex-column">
         </div>
-        <p id="footer">CANVASTYLE <span id="version"></span></p>
+        <div id="footer_container">
+            <p id="footer" class="flex">CANVASTYLE <span id="version"></span></p>
+            <button id="feedback">FEEDBACK</button>
+        </div>
     </div>
     <script src="popup.js"></script>
     <script src="options.js"></script>

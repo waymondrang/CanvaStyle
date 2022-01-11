@@ -1,5 +1,11 @@
 // const reset = document.querySelector("#reset");
 const modules = document.querySelector("#modules");
+const feedback = document.querySelector("#feedback");
+const toggle_theme = document.querySelector("#toggle_theme");
+
+feedback.addEventListener("click", function (e) {
+    chrome.tabs.create({ url: 'https://github.com/waymondrang/CanvaStyle/issues' });
+})
 
 // reset.addEventListener("click", function (e) {
 //     try {
@@ -17,6 +23,18 @@ const modules = document.querySelector("#modules");
 //         status.textContent = "SAVE ERROR";
 //     }
 // })
+
+toggle_theme.addEventListener('click', function (e) {
+    chrome.storage.local.get(["menu_theme"], function (data) {
+        var new_theme;
+        if (!data["menu_theme"]) {
+            new_theme = "default_light";
+        } else {
+            new_theme = data["menu_theme"] === "default_dark" ? "default_light" : "default_dark";
+        }
+        chrome.storage.local.set({ menu_theme: new_theme });
+    })
+})
 
 document.addEventListener("loaded_custom_css", function (data) {
     modules.innerHTML = "";

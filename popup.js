@@ -18,6 +18,8 @@ function uuid_v4() {
     );
 }
 
+const head = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
+
 chrome.storage.onChanged.addListener(function (changes, area) {
     if (Object.keys(changes).includes("custom_css")) {
         storage_custom_css = changes["custom_css"]["newValue"] || [];
@@ -31,11 +33,23 @@ chrome.storage.onChanged.addListener(function (changes, area) {
         timeout = setTimeout(function () {
             status.classList.remove("green", "yellow", "red");
         }, 500)
+    } else if (Object.keys(changes).includes("menu_theme")) {
+        console.log("new theme", changes["menu_theme"]["newValue"])
+        var new_theme = changes["menu_theme"]["newValue"];
+        if (new_theme === "default_light") {
+            const css = document.createElement('link');
+            css.setAttribute("href", chrome.runtime.getURL('options.lightmode.css'));
+            css.id = "lightmode_css";
+            css.rel = "stylesheet";
+            head.insertAdjacentElement('beforeend', css);
+        } else {
+            document.querySelector("#lightmode_css").remove();
+        }
     }
 });
 
 try {
-    chrome.storage.local.get(["custom_css"], function (data) {
+    chrome.storage.local.get(["custom_css", "menu_theme"], function (data) {
         if (!data["custom_css"]) {
             chrome.storage.local.set({ custom_css: default_modules });
             return;
@@ -44,6 +58,15 @@ try {
         usage.textContent = `(${storage_custom_css.length ? storage_custom_css.length : "NONE"} IMPORTED)`
         status.innerHTML = "READY";
         document.dispatchEvent(new CustomEvent("loaded_custom_css", { detail: storage_custom_css }));
+        if (data["menu_theme"]) {
+            if (data["menu_theme"] === "default_light") {
+                const css = document.createElement('link');
+                css.setAttribute("href", chrome.runtime.getURL('options.lightmode.css'));
+                css.id = "lightmode_css";
+                css.rel = "stylesheet";
+                head.insertAdjacentElement('beforeend', css);
+            }
+        }
     })
 } catch (e) {
     console.log(e);
