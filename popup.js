@@ -23,7 +23,7 @@ const head = document.head || document.getElementsByTagName("head")[0] || docume
 chrome.storage.onChanged.addListener(function (changes, area) {
     if (Object.keys(changes).includes("custom_css")) {
         storage_custom_css = changes["custom_css"]["newValue"] || [];
-        usage.textContent = `(${changes["custom_css"]["newValue"] ? changes["custom_css"]["newValue"].length : "NONE"} IMPORTED)`
+        if (usage) usage.textContent = changes["custom_css"]["newValue"] ? `${changes["custom_css"]["newValue"].length} ${changes["custom_css"]["newValue"].length == 1 ? "MODULE" : "MODULES"}` : "NO MODULES";
         status.innerHTML = "UPDATED";
         document.dispatchEvent(new CustomEvent("loaded_custom_css", { detail: storage_custom_css }));
         status.classList.add("yellow");
@@ -55,7 +55,7 @@ try {
             return;
         }
         storage_custom_css = data.custom_css || [];
-        usage.textContent = `(${storage_custom_css.length ? storage_custom_css.length : "NONE"} IMPORTED)`
+        if (usage) usage.textContent = storage_custom_css.length ? `${storage_custom_css.length} ${storage_custom_css.length == 1 ? "MODULE" : "MODULES"}` : "NO MODULES";
         status.innerHTML = "READY";
         document.dispatchEvent(new CustomEvent("loaded_custom_css", { detail: storage_custom_css }));
         if (data["menu_theme"]) {

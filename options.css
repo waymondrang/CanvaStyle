@@ -12,6 +12,11 @@ body {
     box-sizing: border-box;
 }
 
+#logo {
+    width: 36px;
+    height: 36px;
+}
+
 #main {
     margin: 0 auto;
     display: flex;
