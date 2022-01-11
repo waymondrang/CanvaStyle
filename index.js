@@ -19,9 +19,18 @@ const head = document.head || document.getElementsByTagName("head")[0] || docume
 
 //inject dm4c css
 const css = document.createElement('link');
-css.setAttribute("href", chrome.extension.getURL('dm4c.css'));
-css.id = "dm4c-css";
+css.setAttribute("href", chrome.runtime.getURL('dm4c.css'));
+css.id = "dm4c_css";
 css.rel = "stylesheet";
 document.body.insertBefore(css, document.body.lastChild);
+
+//inject custom css
+chrome.storage.local.get(["custom_css"], function (data) {
+    const css = document.createElement('style');
+    css.textContent = data["custom_css"];
+    css.id = "dm4c_custom_css";
+    css.rel = "stylesheet";
+    document.body.insertBefore(css, document.body.lastChild);
+})
 
 dm4cl("injected css")
