@@ -17,13 +17,9 @@ dm4cl("extension activated");
 //declare head element
 const head = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
 
-//declare default modules
-const default_modules = [{ "id": "dm4c", "module_name": "dark mode by raymond wang", "created": new Date(), "enabled": false, "default_module": true }]
-
 //inject custom css
 chrome.storage.local.get(["custom_css"], function (data) {
     if (!data["custom_css"]) {
-        chrome.storage.local.set({ custom_css: default_modules });
         return;
     }
     var dm4c = data["custom_css"].findIndex(e => e.id === "dm4c");
