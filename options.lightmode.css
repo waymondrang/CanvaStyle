@@ -1,0 +1,72 @@
+body {
+    background-color: #fefefe;
+    color: #1a1a1a;
+}
+
+textarea {
+    background-color: #e6e6e6;
+    border: 2px solid #cccccc;
+}
+
+input {
+    background-color: #e6e6e6;
+    border: 2px solid #cccccc;
+}
+
+textarea:focus,
+input:focus {
+    border-color: #b3b3b3;
+}
+
+button {
+    background-color: #e6e6e6;
+    border: 2px solid #cccccc;
+}
+
+button:hover {
+    background-color: #cccccc;
+}
+
+/* ! precedence */
+.green {
+    color: #388e3c !important;
+}
+
+.yellow {
+    color: #ffc400 !important;
+}
+
+.red {
+    color: #ff1744 !important;
+}
+
+#reset,
+button.reset {
+    background-color: #b71c1c;
+    border: 2px solid #d32f2f;
+    color: #fefefe;
+}
+
+#save {
+    background-color: #1b5e20;
+    border: 2px solid #388e3c;
+    color: #fefefe;
+}
+
+#status {
+    color: #999999;
+}
+
+.module {
+    background-color: inherit;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.module_id,
+.empty_container {
+    color: #999999;
+}
+
+#footer {
+    color: #999999;
+}
