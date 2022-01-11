@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <title>options</title>
+    <link href="options.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+        <p class="title">ADD NEW MODULE <span id="usage"></span></p>
+        <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+        <input id="module" placeholder="MODULE NAME" type="text">
+        <div class="action_bar">
+            <button id="save">
+                SAVE
+            </button>
+            <p id="status"></p>
+        </div>
+        <button id="reset">
+            RESET
+        </button>
+        <div id="modules">
+        </div>
+    </div>
+    <script src="popup.js"></script>
+    <script src="options.js"></script>
+</body>
+
+</html>

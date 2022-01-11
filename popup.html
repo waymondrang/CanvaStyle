@@ -9,77 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
     <title>document</title>
-    <style>
-        body {
-            padding: 12px;
-            display: flex;
-            flex-direction: column;
-            width: fit-content;
-            font-family: 'Space Mono', monospace;
-            font-size: 10px;
-            background-color: #1a1a1a;
-            color: #f2f2f2;
-        }
-
-        textarea {
-            min-width: 300px;
-            min-height: 300px;
-            box-sizing: border-box;
-            border-radius: 6px;
-            resize: none;
-            margin-bottom: 12px;
-            font-family: inherit;
-            font-size: inherit;
-            background-color: #262626;
-            border: 2px solid #404040;
-            padding: 4px;
-            color: inherit;
-            outline: none;
-            font-variant-alternates: normal;
-            font-variant-ligatures: none;
-        }
-
-        textarea:focus {
-            border-color: #666666;
-        }
-
-        .action_bar {
-            display: flex;
-            height: min-content;
-            align-items: center;
-        }
-
-        #save {
-            flex: 1;
-            font-family: inherit;
-            font-size: inherit;
-            background-color: #262626;
-            border: 1px solid #404040;
-            border-radius: 4px;
-            height: 24px;
-            color: inherit;
-            cursor: pointer;
-        }
-
-        #save:hover {
-            background-color: #404040;
-        }
-
-        #status {
-            flex: 1;
-            text-align: end;
-            margin: 0px;
-            color: #999999;
-        }
-
-        #status.flash {
-            color: yellow;
-        }
-    </style>
+    <link href="options.css" rel="stylesheet">
 </head>
 
 <body>
+    <p class="title">MODULE QUICK ADD <span id="usage"></span></p>
     <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+    <input id="module" placeholder="MODULE NAME" type="text">
     <div class="action_bar">
         <button id="save">
             SAVE

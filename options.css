@@ -1,0 +1,145 @@
+body {
+    padding: 12px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+#main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+textarea {
+    min-width: 300px;
+    min-height: 300px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    resize: none;
+    margin-bottom: 12px;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #262626;
+    border: 2px solid #404040;
+    padding: 4px;
+    color: inherit;
+    outline: none;
+    font-variant-alternates: normal;
+    font-variant-ligatures: none;
+}
+
+input {
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #262626;
+    border: 2px solid #404040;
+    padding: 4px;
+    color: inherit;
+    outline: none;
+    font-variant-alternates: normal;
+    font-variant-ligatures: none;
+}
+
+textarea:focus,
+input:focus {
+    border-color: #666666;
+}
+
+.action_bar {
+    display: flex;
+    height: min-content;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #262626;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    padding: 0 12px;
+    height: 24px;
+    color: inherit;
+    cursor: pointer;
+    width: fit-content;
+}
+
+button:hover {
+    background-color: #404040;
+}
+
+/* ! precedence */
+.green {
+    color: #00e676 !important;
+}
+
+.yellow {
+    color: #ffc400 !important;
+}
+
+.red {
+    color: #ff1744 !important;
+}
+
+#reset,
+button.reset {
+    background-color: #b71c1c;
+    border: 1px solid #d32f2f;
+}
+
+#status {
+    flex: 1;
+    text-align: end;
+    margin: 0px;
+    color: #999999;
+}
+
+.title {
+    margin-bottom: 12px;
+}
+
+p {
+    margin: 0;
+}
+
+.module {
+    background-color: #262626;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.module_top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.module_bottom>* {
+    margin-right: 12px;
+}
+
+.module_left {
+    flex: 1;
+}
+
+.empty_container {
+    margin-top: 12px;
+    width: 100%;
+    text-align: center;
+}
+
+.module_id,
+.empty_container {
+    color: #999999;
+}

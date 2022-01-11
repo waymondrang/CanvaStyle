@@ -26,8 +26,9 @@ document.body.insertBefore(css, document.body.lastChild);
 
 //inject custom css
 chrome.storage.local.get(["custom_css"], function (data) {
+    var custom_css = data["custom_css"].filter(e => e["enabled"]).map(e => e["custom_css"].trim()).join("\n");
     const css = document.createElement('style');
-    css.textContent = data["custom_css"];
+    css.textContent = custom_css;
     css.id = "dm4c_custom_css";
     css.rel = "stylesheet";
     document.body.insertBefore(css, document.body.lastChild);
