@@ -1,7 +1,7 @@
 body {
     padding: 12px;
     font-family: 'Space Mono', monospace;
-    font-size: 10px;
+    font-size: 12px;
     background-color: #1a1a1a;
     color: #f2f2f2;
 }
@@ -11,7 +11,9 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
+    height: 100%;
+    overflow: hidden;
 }
 
 textarea {
@@ -62,8 +64,8 @@ input:focus {
 button {
     font-family: inherit;
     font-size: inherit;
-    background-color: #262626;
-    border: 1px solid #404040;
+    background-color: #4d4d4d;
+    border: 2px solid #666666;
     border-radius: 4px;
     padding: 0 12px;
     height: 24px;
@@ -73,7 +75,7 @@ button {
 }
 
 button:hover {
-    background-color: #404040;
+    background-color: #666666;
 }
 
 /* ! precedence */
@@ -92,7 +94,16 @@ button:hover {
 #reset,
 button.reset {
     background-color: #b71c1c;
-    border: 1px solid #d32f2f;
+    border: 2px solid #d32f2f;
+}
+
+#save {
+    background-color: #1b5e20;
+    border: 2px solid #388e3c;
+}
+
+#options {
+    margin-left: 12px;
 }
 
 #status {
@@ -110,11 +121,39 @@ p {
     margin: 0;
 }
 
-.module {
-    background-color: #262626;
-    padding: 12px;
-    border-radius: 12px;
+#modules {
     margin-top: 12px;
+    max-height: 420px;
+    overflow: auto;
+}
+
+/* width */
+#modules::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+#modules::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+#modules::-webkit-scrollbar-thumb {
+    background: #404040;
+    border-radius: 500px;
+}
+
+/* Handle on hover */
+#modules::-webkit-scrollbar-thumb:hover {
+    background: #595959;
+    border-radius: 500px;
+}
+
+.module {
+    background-color: #333333;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
     display: flex;
     flex-direction: column;
 }
@@ -141,5 +180,9 @@ p {
 
 .module_id,
 .empty_container {
+    color: #999999;
+}
+
+#footer {
     color: #999999;
 }

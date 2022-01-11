@@ -13,17 +13,22 @@
 </head>
 
 <body>
-    <p class="title">MODULE QUICK ADD <span id="usage"></span></p>
-    <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
-    <input id="module" placeholder="MODULE NAME" type="text">
-    <div class="action_bar">
-        <button id="save">
-            SAVE
-        </button>
-        <p id="status"></p>
+    <div id="main">
+        <p class="title">MODULE QUICK ADD <span id="usage"></span></p>
+        <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+        <input id="module" placeholder="MODULE NAME" type="text">
+        <div class="action_bar">
+            <button id="save">
+                SAVE
+            </button>
+            <button id="options">MANAGE MODULES</button>
+            <p id="status"></p>
+        </div>
+        <p id="footer">CANVASTYLE <span id="version"></span></p>
     </div>
     <script src="popup.js">
     </script>
+    <script src="only_popup.js"></script>
 </body>
 
 </html>

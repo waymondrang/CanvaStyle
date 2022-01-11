@@ -4,6 +4,11 @@ const input = document.querySelector("textarea");
 const usage = document.querySelector("#usage");
 const module = document.querySelector("#module");
 
+const version = document.querySelector("#version");
+version.textContent = chrome.runtime.getManifest().version;
+
+const default_modules = [{ "id": "dm4c-official-module", "module_name": "dark mode by raymond wang", "created": new Date(), "enabled": false, "default_module": true }]
+
 var storage_custom_css;
 var timeout;
 
@@ -31,6 +36,10 @@ chrome.storage.onChanged.addListener(function (changes, area) {
 
 try {
     chrome.storage.local.get(["custom_css"], function (data) {
+        if (!data["custom_css"]) {
+            chrome.storage.local.set({ custom_css: default_modules });
+            return;
+        }
         storage_custom_css = data.custom_css || [];
         usage.textContent = `(${storage_custom_css.length ? storage_custom_css.length : "NONE"} IMPORTED)`
         status.innerHTML = "READY";

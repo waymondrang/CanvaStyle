@@ -1,7 +1,8 @@
 {
-    "name": "dm4c",
+    "name": "CanvaStyle",
     "version": "1.0.0",
-    "description": "dark mode for canvas © raymond wang",
+    "description": "Give Canvas a new look with CanvaStyle, the ultimate stylization tool for Canvas LMS.",
+    "author": "Raymond Wang",
     "manifest_version": 3,
     "action": {
         "default_title": "open popup",

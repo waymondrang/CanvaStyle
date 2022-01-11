@@ -1401,12 +1401,12 @@ button#courseMenuToggle.Button:hover {
 }
 
 /* recent activities */
-div#course_home_content {
+/*div#course_home_content {
   padding: 18px;
   background-color: var(--dm4c-15);
   border: 1px solid var(--dm4c-25);
   border-radius: 8px;
-}
+}*/
 
 /* using modules popup */
 .eesy_container_v4.eesy_light a {

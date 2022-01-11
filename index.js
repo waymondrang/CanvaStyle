@@ -17,16 +17,25 @@ dm4cl("extension activated");
 //declare head element
 const head = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
 
-//inject dm4c css
-const css = document.createElement('link');
-css.setAttribute("href", chrome.runtime.getURL('dm4c.css'));
-css.id = "dm4c_css";
-css.rel = "stylesheet";
-document.body.insertBefore(css, document.body.lastChild);
+//declare default modules
+const default_modules = [{ "id": "dm4c", "module_name": "dark mode by raymond wang", "created": new Date(), "enabled": false, "default_module": true }]
 
 //inject custom css
 chrome.storage.local.get(["custom_css"], function (data) {
-    var custom_css = data["custom_css"].filter(e => e["enabled"]).map(e => e["custom_css"].trim()).join("\n");
+    if (!data["custom_css"]) {
+        chrome.storage.local.set({ custom_css: default_modules });
+        return;
+    }
+    var dm4c = data["custom_css"].findIndex(e => e.id === "dm4c");
+    if (dm4c > -1 && data["custom_css"][dm4c]["enabled"]) {
+        //inject dm4c css
+        const css = document.createElement('link');
+        css.setAttribute("href", chrome.runtime.getURL('dm4c.css'));
+        css.id = "dm4c_css";
+        css.rel = "stylesheet";
+        document.body.insertBefore(css, document.body.lastChild);
+    }
+    var custom_css = data["custom_css"].filter(e => e["enabled"] && !e["default_module"]).map(e => e["custom_css"].trim()).join("\n");
     const css = document.createElement('style');
     css.textContent = custom_css;
     css.id = "dm4c_custom_css";
@@ -34,4 +43,4 @@ chrome.storage.local.get(["custom_css"], function (data) {
     document.body.insertBefore(css, document.body.lastChild);
 })
 
-dm4cl("injected css")
+dm4cl("injected css");
