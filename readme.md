@@ -1,6 +1,6 @@
-# dm4c
+# CanvaStyle
 
-A dark and monospace theme for Canvas.
+Give Canvas a new look with CanvaStyle, the ultimate stylization tool for Canvas LMS.
 
 Tested on and developed for canvas.instructure.com for maximum compatibility.
 
