@@ -22,7 +22,7 @@ chrome.storage.local.get(["custom_css"], function (data) {
     if (!data["custom_css"]) {
         return;
     }
-    var dm4c = data["custom_css"].findIndex(e => e.id === "dm4c");
+    var dm4c = data["custom_css"].findIndex(e => e.id === "dm4c-official-module");
     if (dm4c > -1 && data["custom_css"][dm4c]["enabled"]) {
         //inject dm4c css
         const css = document.createElement('link');
