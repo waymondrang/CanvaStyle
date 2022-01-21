@@ -1,6 +1,6 @@
 {
     "name": "CanvaStyle",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Give Canvas a new look with CanvaStyle, the ultimate stylization tool for Canvas LMS.",
     "author": "Raymond Wang",
     "manifest_version": 3,
@@ -15,9 +15,7 @@
     "content_scripts": [
         {
             "matches": [
-                "*://canvas.ucsd.edu/*",
-                "*://canvas.eee.uci.edu/*",
-                "*://canvas.instructure.com/*"
+                "<all_urls>"
             ],
             "run_at": "document_end",
             "js": [
@@ -32,9 +30,7 @@
                 "popup.html"
             ],
             "matches": [
-                "*://canvas.ucsd.edu/*",
-                "*://canvas.eee.uci.edu/*",
-                "*://canvas.instructure.com/*"
+                "<all_urls>"
             ]
         }
     ],
