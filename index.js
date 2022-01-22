@@ -1,6 +1,6 @@
 // if (["canvas", "instructure"].filter(e => (window.location.origin).includes(e)).length > 0) {
 if (!window.location.origin.includes("www.instructure.com") && (["canvas", "instructure"].filter(e => (window.location.origin).includes(e)).length > 0 || Array.prototype.filter.call(document.querySelectorAll("link[rel=stylesheet]"), function (e) {
-    return e.getAttribute("href").includes("instructure")
+    return e.getAttribute("href") ? e.getAttribute("href").includes("instructure") : false;
 }).length > 0)) {
     var oglog = console.log;
     var dm4cl = function () {
